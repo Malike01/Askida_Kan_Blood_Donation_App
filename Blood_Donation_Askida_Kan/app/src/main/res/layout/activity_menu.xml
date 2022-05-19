@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/background_radian_radius"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Askıda Kan"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_requests"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Bağış Al"
+        app:layout_constraintEnd_toStartOf="@+id/button_search"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="Bağış Yap"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_requests"
+        app:layout_constraintTop_toTopOf="@+id/button_requests" />
+
+    <Button
+        android:id="@+id/button_create_request"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:text="Bağışlarım"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/button_requests"
+        app:layout_constraintStart_toStartOf="@+id/button_requests"
+        app:layout_constraintTop_toBottomOf="@+id/button_requests" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:text="Kan Haritası"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/button_search"
+        app:layout_constraintStart_toStartOf="@+id/button_search"
+        app:layout_constraintTop_toBottomOf="@+id/button_search" />
+    <Button
+        android:id="@+id/button_bank"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:text="Bilgi Bankası"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/button_create_request"
+        app:layout_constraintStart_toStartOf="@+id/button_create_request"
+        app:layout_constraintTop_toBottomOf="@+id/button_create_request" />
+
+    <Button
+        android:id="@+id/button_point"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:text="Kan Bağış Noktaları"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button_notion"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:text="Acil Durum Notlarım"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/button_bank"
+        app:layout_constraintStart_toStartOf="@+id/button_bank"
+        app:layout_constraintTop_toBottomOf="@+id/button_bank" />
+
+    <ScrollView
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
