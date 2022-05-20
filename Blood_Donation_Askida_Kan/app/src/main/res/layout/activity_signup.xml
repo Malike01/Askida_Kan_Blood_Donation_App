@@ -70,19 +70,22 @@
             android:layout_height="60dp"
             android:drawableLeft="@drawable/ic_call_back"
             android:hint="Telefon Numarası"
+            android:maxLength="64"
             android:inputType="phone" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:drawableLeft="@drawable/ic_blood"
-            android:hint="Kan Grubu" />
+            android:hint="Kan Grubu"
+            android:inputType="textAutoComplete"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:drawableLeft="@drawable/ic_location_on_red_24dp"
-            android:hint="Konum" />
+            android:hint="Konum"
+            android:inputType="textAutoComplete"/>
 
 
         <EditText
@@ -90,6 +93,7 @@
             android:layout_height="60dp"
             android:drawableLeft="@drawable/ic_key"
             android:hint="Şifre"
+            android:maxLength="18"
             android:inputType="textPassword" />
 
     </LinearLayout>
