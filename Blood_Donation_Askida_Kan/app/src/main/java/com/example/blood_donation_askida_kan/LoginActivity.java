@@ -69,7 +69,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void authenticateUser() {
-        EditText etLoginEmail = findViewById(R.id.email);
         EditText etLoginPassword = findViewById(R.id.password);
         EditText etLoginPhone = findViewById(R.id.phone);
 
@@ -81,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        mAuth.signInWithEmailAndPassword( password, phone)
+        mAuth.signInWithPhoneAndPassword(password, phone)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
