@@ -61,10 +61,13 @@
         tools:layout_editor_absoluteX="32dp">
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:drawableLeft="@drawable/ic_email"
-            android:hint="Email veya Telefon Numarası" />
+            android:drawableLeft="@drawable/ic_call_back"
+            android:hint="Telefon Numarası"
+            android:inputType="phone"
+            />
 
         <EditText
             android:layout_width="match_parent"
@@ -79,6 +82,17 @@
             android:layout_marginTop="15dp"
             android:gravity="right"
             android:text="Şifrenizi Mi Unuttunuz?" />
+        
+        
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="with"
+            android:layout_marginLeft="115dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            tools:ignore="MissingConstraints" />
 
     </LinearLayout>
 
@@ -104,6 +118,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Giriş Yap"
+        tools:ignore="MissingConstraints" />
+    
+       <Button
+        android:id="@+id/btnemail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/white_light"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawableLeft="@drawable/ic_email"
         tools:ignore="MissingConstraints" />
 
 
