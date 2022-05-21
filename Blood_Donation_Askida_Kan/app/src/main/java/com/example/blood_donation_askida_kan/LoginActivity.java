@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(LoginActivity.this,DonnorActivity.class);
         startActivity(intent);
     }
-}*/
+*/
 package com.example.blood_donation_askida_kan;
 
 import android.content.Intent;
@@ -73,16 +73,15 @@ public class LoginActivity extends AppCompatActivity {
         EditText etLoginPassword = findViewById(R.id.password);
         EditText etLoginPhone = findViewById(R.id.phone);
 
-        String email = etLoginEmail.getText().toString();
         String password = etLoginPassword.getText().toString();
         String phone = etLoginPhone.getText().toString();
 
-        if (email.isEmpty() phone.isEmpty() || password.isEmpty()) {
+        if (phone.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Please fill all fields", Toast.LENGTH_LONG).show();
             return;
         }
 
-        mAuth.signInWithEmailAndPassword(email, password, phone)
+        mAuth.signInWithEmailAndPassword( password, phone)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
