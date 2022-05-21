@@ -1,6 +1,5 @@
 package com.example.blood_donation_askida_kan;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +10,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.material.textfield.TextInputEditText;
 
 public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -47,8 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void registerUser() {
-        
-        EditText etRegisterEmail = findViewById(R.id.email);
+        EditText etRegisterUserName = findViewById(R.id.user);
         EditText etRegisterPassword = findViewById(R.id.password);
         EditText etRegisterblood = findViewById(R.id.blood);
         EditText etRegisterLocation = findViewById(R.id.location;
@@ -57,10 +53,10 @@ public class SignUpActivity extends AppCompatActivity {
         String blood = etRegisterblood.getText().toString();
         String phone = etRegisterPhone.getText().toString();
         String location = etRegisterLocation.getText().toString();
-        String email = etRegisterEmail.getText().toString();
+        String user = etRegisterUserName.getText().toString();
         String password = etRegisterPassword.getText().toString();
 
-        if (blood.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty() || location.isEmpty()) {
+        if (blood.isEmpty() || phone.isEmpty() || user.isEmpty() || password.isEmpty() || location.isEmpty()) {
             Toast.makeText(this, "Eksik Olan Alanları Doldurunuz", Toast.LENGTH_LONG).show();
             return;
         }
@@ -105,4 +101,5 @@ public class SignUpActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }*/
+
 
