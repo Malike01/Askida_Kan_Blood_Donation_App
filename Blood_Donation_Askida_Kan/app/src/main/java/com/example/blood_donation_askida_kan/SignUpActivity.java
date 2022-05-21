@@ -53,20 +53,20 @@ public class SignUpActivity extends AppCompatActivity {
         String blood = etRegisterblood.getText().toString();
         String phone = etRegisterPhone.getText().toString();
         String location = etRegisterLocation.getText().toString();
-        String user = etRegisterUserName.getText().toString();
+        String username = etRegisterUserName.getText().toString();
         String password = etRegisterPassword.getText().toString();
 
-        if (blood.isEmpty() || phone.isEmpty() || user.isEmpty() || password.isEmpty() || location.isEmpty()) {
+        if (blood.isEmpty() || phone.isEmpty() || username.isEmpty() || password.isEmpty() || location.isEmpty()) {
             Toast.makeText(this, "Eksik Olan Alanları Doldurunuz", Toast.LENGTH_LONG).show();
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(email, password)
+        mAuth.createUserWithPhoneAndPassword(phone, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            User user = new User(password, blood, email, phone, location);
+                            User user = new User(username, password, blood, phone, location);
                             FirebaseDatabase.getInstance().getReference("users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -101,5 +101,9 @@ public class SignUpActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }*/
+
+
+
+
 
 
